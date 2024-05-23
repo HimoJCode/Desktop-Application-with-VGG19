@@ -11,8 +11,6 @@ Once processed, the transformed image is ready for display and can be effortless
 - View the transformed image.
 - Download the transformed image.
 - Share the transformed image on social media platforms.
-  
-- Note that content and style image must the same size
 
 ## Requirements
 - Python 3.7+
