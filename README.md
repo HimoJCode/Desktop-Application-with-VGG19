@@ -19,7 +19,7 @@ This desktop application leverages the power of the VGG19 neural network to perf
 - Share to Twitter: Allows users to tweet the transformed image.
 - Share to Instagram: Provides instructions for sharing the image on Instagram, which does not support direct uploads via URL.
 
-## Social Media Sharing
+## Download
 - Image Download: Users can download the transformed image as a PNG file
 
 ## Requirements
