@@ -64,12 +64,11 @@ document
         var processButton = document.getElementById("process-button");
         processButton.disabled = true;
         var progress = 0;
-        var increment = Math.max(1, Math.floor(1000 / numSteps)); // Adjust increment based on numSteps
+        var increment = Math.max(1, Math.floor(1000 / numSteps));
         var progressInterval = setInterval(updateProgress, increment);
 
         function updateProgress() {
           if (progress < 86) {
-            // Stop at 90% to wait for process completion
             progress += 1;
             processButton.innerText = `Processing ${progress}%`;
           }
@@ -91,9 +90,8 @@ document
             document.getElementById("social-share-buttons").style.display =
               "none";
           } else {
-            // Complete the progress to 100%
             var completeProgress = setInterval(function () {
-              progress += 1; // Fast increment to 100%
+              progress += 1;
               processButton.innerText = `Processing ${progress}%`;
               if (progress >= 100) {
                 clearInterval(completeProgress);
@@ -107,6 +105,33 @@ document
                 document.getElementById("social-share-buttons").style.display =
                   "flex";
                 document.getElementById("error-section").style.display = "none";
+
+                // Create a blob URL to share the image on social media platforms
+                var blob = base64ToBlob(response, "image/png");
+                var url = URL.createObjectURL(blob);
+
+                // Update social media share links
+                document.getElementById("share-facebook").onclick =
+                  function () {
+                    var facebookShare =
+                      "https://www.facebook.com/sharer/sharer.php?u=" +
+                      encodeURIComponent(url);
+                    window.open(facebookShare, "_blank");
+                  };
+
+                document.getElementById("share-twitter").onclick = function () {
+                  var twitterShare =
+                    "https://twitter.com/intent/tweet?text=Check out this transformed image&url=" +
+                    encodeURIComponent(url);
+                  window.open(twitterShare, "_blank");
+                };
+
+                document.getElementById("share-instagram").onclick =
+                  function () {
+                    alert(
+                      "Instagram does not support direct image uploads via URL. Please save the image and upload it manually."
+                    );
+                  };
               }
             }, 50);
           }
