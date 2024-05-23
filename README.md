@@ -1,6 +1,6 @@
 # Desktop Application with VGG19 for Style Transfer
 
-Overview
+##Overview
 This desktop application leverages the power of the VGG19 neural network to perform style transfer on images. Style transfer is a process that blends the content of one image with the style of another, creating a new, visually appealing image. This application allows users to upload a content image and a style image, adjust the transformation quality, and process the images to generate a transformed output. The final image can be viewed, downloaded, or shared directly to social media platforms.
 
 ## Features
