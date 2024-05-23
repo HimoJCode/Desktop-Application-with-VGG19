@@ -9,10 +9,9 @@ This desktop application leverages the power of the VGG19 neural network to perf
 - View the transformed image.
 - Download the transformed image.
 - Share the transformed image on social media platforms.
-
+  
 ## Result Display
--Transformed Image Display: Once processed, the transformed image is displayed within the application interface.
--Error Handling: Provides feedback if the images are not of the same dimensions or if there are any issues during processing.
+Error Handling: Provides feedback if the images are not of the same dimensions or if there are any issues during processing.
 
 ## Social Media Sharing
 -Share to Facebook: Allows users to share the transformed image directly to Facebook.
