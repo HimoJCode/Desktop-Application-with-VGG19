@@ -19,8 +19,8 @@ This desktop application leverages the power of the VGG19 neural network to perf
 - Share to Twitter: Allows users to tweet the transformed image.
 - Share to Instagram: Provides instructions for sharing the image on Instagram, which does not support direct uploads via URL.
 
-## Download
-Image Download: Users can download the transformed image as a PNG file
+## Social Media Sharing
+- Image Download: Users can download the transformed image as a PNG file
 
 ## Requirements
 - Python 3.7+
@@ -35,7 +35,8 @@ Image Download: Users can download the transformed image as a PNG file
 - PyTorch (for VGG19 model and style transfer)
 - HTML, CSS, JavaScript (for the user interface)
 
-## Run the application 
--python main.py
+
+## Run the application
+- python main.py
 
     
