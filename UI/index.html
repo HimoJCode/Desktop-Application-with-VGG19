@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Art Style VGG19</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="/eel.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <h1>IMAGE ART STYLE USING VGG19</h1>
+      </header>
+      <main>
+        <section id="upload-section">
+          <div class="upload-container">
+            <input
+              type="file"
+              id="content-image"
+              name="content-image"
+              accept="image/*"
+              onchange="previewContentImage()"
+            />
+            <div
+              class="upload-box"
+              onclick="document.getElementById('content-image').click();"
+            >
+              <span>Upload image</span>
+            </div>
+            <p>Content Image</p>
+          </div>
+          <div class="upload-container">
+            <input
+              type="file"
+              id="style-image"
+              name="style-image"
+              accept="image/*"
+              onchange="previewStyleImage()"
+            />
+            <div
+              class="upload-box"
+              onclick="document.getElementById('style-image').click();"
+            >
+              <span>Upload image</span>
+            </div>
+            <p>Style Image</p>
+          </div>
+          <section id="error-section" style="display: none">
+            <p id="error-message" style="color: red"></p>
+          </section>
+        </section>
+        <section id="controls-section">
+          <p>Adjust Image Quality</p>
+          <input
+            type="range"
+            id="image-quality"
+            name="image-quality"
+            min="1"
+            max="1000"
+            value="500"
+          />
+          <span id="quality-value">500</span>
+          <button id="process-button">PROCESS</button>
+        </section>
+        <section id="result-section">
+          <h2>YOUR TRANSFORMED IMAGE</h2>
+          <img id="transformed-image" />
+          <button id="download-button">Download</button>
+          <div id="social-share-buttons">
+            <p>Share on:</p>
+            <button id="share-facebook">
+              <img src="facebook.png" alt="Share on Facebook" />
+            </button>
+            <button id="share-twitter">
+              <img src="twitter.png" alt="Share on Twitter" />
+            </button>
+            <button id="share-instagram">
+              <img src="instagram.png" alt="Share on Instagram" />
+            </button>
+          </div>
+        </section>
+        <section id="error-section" style="display: none">
+          <h2 id="error-message" style="color: red"></h2>
+        </section>
+      </main>
+    </div>
+    <script src="scripts.js"></script>
+  </body>
+</html>
