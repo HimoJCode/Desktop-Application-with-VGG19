@@ -1,4 +1,4 @@
-# Desktop Application with VGG19
+# IMAGE ART STYLE USING VGG19
 
 This is a desktop application that uses the VGG19 neural network model for style transfer.
 Users can upload both content and style images for seamless style transfer processing. 
